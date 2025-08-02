@@ -8,8 +8,8 @@ body{
     background-color: var(--bg-color);
 }
 :root{
-    --main-color:rgb(56, 85, 121);
+    --main-color:hsl(202, 55%, 16%);
     --sec-color:rgb(41, 115, 165);
-    --bg-color: rgb(216, 252, 252);
+    --bg-color: hsl(202, 86%, 94%);
     --btn-color:rgb(223, 210, 28);
 }
