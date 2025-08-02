@@ -1,0 +1,32 @@
+.box{
+    background: rgb(35, 54, 78);
+    border-radius: 5px;
+    border-top: 4px solid var(--btn-color);
+    padding: 25px;
+    margin-top: 20px;
+}
+.cont h1{
+    font-size: 50px;
+    color: var(--btn-color);
+}
+.cont h2{
+    font-size: 20px;
+}
+.cont p{
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+hr{
+    border: none;
+    border-bottom: 1px solid rgb(155, 155, 155);
+    margin: 20px 5px;
+}
+
+@media (max-width:650px) {
+    .cont h1{
+        font-size: 35px;
+    }
+    .cont h2{
+        font-size: 15px;
+    }
+}

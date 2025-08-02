@@ -1,0 +1,16 @@
+<div class="container">
+    @if(!showRes||!selectType){
+        <div class="no-res">
+        <img src="illustration-empty.svg" alt="calc">
+        <h1>Results shown here</h1>
+            <p>Complete the form and click "Calculate Repayment" to see what your monthly repayment would be</p>
+        </div>
+    }
+    @else {
+        <div class="found-res">
+            <h1>Your results</h1>
+            <p>Your results are shown below based on the information you provided. To adjucst the results, edit the form and click "Calculate Repayment" again.</p>
+            <app-result/>
+        </div>
+    }
+</div>

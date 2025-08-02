@@ -1,0 +1,176 @@
+h3{
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+.head{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+form{
+    padding: 30px 25px;
+}
+.head button{
+    border: none;
+    text-decoration: underline;
+    background-color: transparent;
+    color: var(--sec-color);
+}
+.head button:hover{
+    font-weight: 600;
+}
+label{
+    color: var(--sec-color);
+}
+input{
+    border: none;
+}
+.upper{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2,1fr);
+    margin-bottom: 20px;
+}
+.upper > :first-child{
+    grid-column: span 2;
+}
+.upper > :first-child input{
+    width: 100%;
+}
+.upper .input{
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    border: 1px solid var(--sec-color);
+}
+.upper .input input{
+    font-size: 15px;
+    flex: 1 1 auto;     
+    width: 100%;        
+    height: 47px;
+    padding: 5px 10px;
+    font-weight: 600;
+    color: var(--main-color);
+}
+.upper p{
+    display: flex;
+    align-items: center;
+    color: var(--sec-color);
+    font-weight: 600;
+    justify-content: center;
+    background-color: var(--bg-color);
+    padding: 10px 15px;
+}
+input:focus{
+    border: none;
+    outline: none;
+}
+.upper .form-input .input{
+    margin-top: 10px;
+}
+.upper .form-input .input:hover{
+    border-color: var(--main-color);
+    border-width: 1.5px;
+}
+
+/* lower component  */
+
+
+.lower .radio-type{
+    display: block;
+    margin-bottom: 7px;
+}
+.lower p{
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding:0px 15px;
+    border: 1px solid var(--sec-color);
+    height: 47px;
+    margin-bottom: 10px;
+}
+input[type="radio"] {
+    accent-color: var(--btn-color);
+}
+.lower p label{
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    color: var(--main-color);
+    flex: 1 1 auto;
+    height: 100%;
+}
+.lower p:hover{
+    border-color: var(--btn-color) !important;
+}
+.calc-pay{
+    background-color: var(--btn-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+    border: none;
+    padding: 10px 30px;
+    margin-top: 30px;
+}.calc-pay:hover{
+    background-color: rgb(255, 241, 181);
+}
+.calc-pay p{
+    color: var(--main-color);
+    height: fit-content;
+    border: none;
+    margin: 0;
+    font-weight: 600;
+    font-size: 15px;
+}
+.calc-pay img{
+    width: 23px;
+}
+
+
+.active{
+    border-color: var(--btn-color) !important;
+}
+.active-p{
+    background-color: var(--btn-color) !important;
+}
+.active-radio{
+    background-color: rgb(252, 248, 242);
+    border-color:var(--btn-color) !important;
+}
+.empty-field-p{
+    color: white !important;
+    background-color: rgb(202, 59, 59) !important;
+}
+.empty-field{
+    border-color: rgb(202, 59, 59) !important;
+}
+p.not-found{
+    border: none !important;
+    color: rgb(202, 59, 59) !important;
+    background-color: transparent !important;
+    text-align: start !important;
+    display: block !important;
+    padding: 5px 0 !important;
+    font-size: 12px ;
+}
+
+:host{
+    width: 50%;
+}
+
+@media (max-width:650px) {
+    .head{
+        display: block;
+    }
+    .upper{
+    display: block;
+    }
+    .upper .input{
+        margin-bottom: 10px;
+    }
+    .calc-pay{
+        width: 100%;
+    }
+}

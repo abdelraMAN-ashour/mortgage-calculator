@@ -1,0 +1,59 @@
+<form >
+    <div class="head">
+        <h3>Mortgage Calculator</h3>
+        <button (click)="clear()">Clear All</button>
+    </div>
+    <div class="upper">
+        <div class="form-input">
+            <label for="amount">Mortgage Amount</label>
+            <div class="input" [class.active]="active.amount" [class.empty-field]="!found.amount">
+                <p class="logo" [class.active-p]="active.amount" [class.empty-field-p]="!found.amount">&pound;</p>
+                <input type="number" name="amount" id="amount" [(ngModel)]="amount" (focus)="onFocus($event)" (blur)="onBlur()">
+            </div>
+            @if(!found.amount){
+                <p class="not-found">This field is required</p>
+            }
+        </div>
+        <div class="form-input">
+            <label for="amount">Mortgage Term</label>
+            <div class="input" [class.active]="active.year" [class.empty-field]="!found.year">
+                <input type="number" name="year" id="year" [(ngModel)]="year" (focus)="onFocus($event)" (blur)="onBlur()">
+                <p class="logo" [class.active-p]="active.year" [class.empty-field-p]="!found.year">years</p>
+        </div>
+            @if(!found.year){
+                <p class="not-found">This field is required</p>
+            }
+        </div>
+        <div class="form-input">
+            <label for="amount">Interest Rate</label>
+            <div class="input" [class.active]="active.rate" [class.empty-field]="!found.rate">
+                <input type="number" name="rate" id="rate" [(ngModel)]="rate" (focus)="onFocus($event)" (blur)="onBlur()">
+                <p class="logo" [class.active-p]="active.rate" [class.empty-field-p]="!found.rate">%</p>
+                </div>
+            @if(!found.rate){
+                <p class="not-found">This field is required</p>
+            }
+
+        </div>
+    </div>
+    <div class="lower">
+        <div class="form-input">
+            <label class="radio-type">Mortgage type</label>
+            <p [class.active-radio]="activeRadio.repay">
+                <input type="radio" name="type" id="repay" (click)="onClick($event)" [checked]="activeRadio.repay">
+                <label for="repay">Repayment</label>
+            </p>
+            <p [class.active-radio]="activeRadio.interest">
+                <input type="radio" name="type" id="interest" (click)="onClick($event)" [checked]="activeRadio.interest">
+                <label for="interest">Interest Only</label>
+            </p>
+            @if(!found.radio){
+                <p class="not-found">This field is required</p>
+            }
+        </div>
+        <button class="calc-pay" (click)="calcTotal()">
+            <img src="icon-calculator.svg" alt="calc">
+            <p>Calculate Repayment</p>
+        </button>
+    </div>
+</form>

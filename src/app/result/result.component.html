@@ -1,0 +1,19 @@
+<div class="box">
+    @if(mortType?.repay){
+        <div class="cont">
+            <p>Your monthly repayments </p>
+            <h1>&pound; {{res?.monthly| number:"1.2-2"}}</h1>
+        </div>
+        <hr>
+        <div class="cont">
+            <p>Total you'll repay over the term</p>
+            <h2>&pound; {{res?.total| number:"1.2-2"}}</h2>
+        </div>
+    }
+    @else if(mortType?.interest){
+        <div class="cont">
+            <p>Your total interest</p>
+            <h1>&pound; {{res?.interest| number:"1.2-2"}}</h1>
+        </div>
+    }
+</div>

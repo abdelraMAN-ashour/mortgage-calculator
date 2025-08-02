@@ -1,0 +1,43 @@
+.container{
+    padding: 20px 30px;
+    background-color: var(--main-color);
+    min-height: 100%;
+    border-bottom-left-radius: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.no-res{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+}
+.no-res img{
+    margin-bottom: 20px;
+    width: 150px;
+}
+.no-res h1,.found-res h1{
+    margin-bottom: 10px;
+    letter-spacing: 1.1px;
+    font-size: 20px;
+}
+.no-res p,.found-res p{
+    font-size: 12px;
+    line-height: 1.7;
+}
+.found-res{
+    color: white;
+}
+:host{
+    width: 50%;
+}
+
+@media (max-width:650px) {
+    .container{
+        border-radius: 0;
+        
+    }
+}
